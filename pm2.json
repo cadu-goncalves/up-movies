@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "name": "up-movies",
+      "script": "src/server.js",
+      "watch": true,
+      "ignore_watch": [
+        ".git",
+        "node_modules/**/node_modules"
+      ],
+      "env": {
+        "production": true
+      }
+    }
+  ]
+}
