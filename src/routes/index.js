@@ -1,5 +1,5 @@
 import Home from '../components/Home';
-import Topics from '../components/Topics';
+import Movie from '../components/Movie';
 import NotFound from '../components/NotFound';
 
 export default [
@@ -7,7 +7,7 @@ export default [
     path: '/', component: Home,
   },
   {
-    path: '/topics', component: Topics
+    path: '/movies', component: Movie
   },
   {
     component: NotFound

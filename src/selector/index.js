@@ -1,4 +1,4 @@
 import get from 'lodash/get';
 
-export const topicsSelector = (state) =>
-  get(state, ['topicsReducer', 'items']);
+export const moviesSelector = (state) =>
+  get(state, ['moviesReducer', 'items']);
