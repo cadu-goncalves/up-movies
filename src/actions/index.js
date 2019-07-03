@@ -1,7 +1,8 @@
-export const UPDATE_TOPICS = 'Topics/UPDATE_TOPICS';
+export const UPDATE_MOVIES = 'Movie/UPDATE';
 
 function action(type, payload = {}) {
+  console.log('KKKKKKKKKKKKK');
   return { type, ...payload };
 }
 
-export const updateTopics = (items) => action(UPDATE_TOPICS, { items });
+export const updateMovies = (items) => action(UPDATE_MOVIES, { items });

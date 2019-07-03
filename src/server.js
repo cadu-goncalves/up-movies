@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 
 import App from './components/App';
 import configureStore from './redux/store';
-import topicsSaga from './saga/topics';
+import moviesSaga from './saga/movies';
 
 const { CLIENT_ONLY } = process.env;
 
@@ -18,7 +18,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', 'src/views');
 // static content
-app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use('/static', express.static('public'));
 
 // bind all routes to ReactDOMServer
 app.get('*', async (req, res) => {
@@ -27,7 +27,7 @@ app.get('*', async (req, res) => {
 
   // recover saga state
   const store = configureStore({});
-  await store.runSaga(topicsSaga).done;
+  await store.runSaga(moviesSaga).done;
   const state = store.getState();
 
   // render state and content

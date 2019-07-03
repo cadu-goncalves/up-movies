@@ -5,13 +5,13 @@ import { Provider } from 'react-redux';
 
 import App from './components/App';
 import configureStore from './redux/store';
-import topicsSaga from './saga/topics';
+import movieSaga from './saga/movies';
 
 const initialState = window.__REDUX_STATE__ || {};
 const store = configureStore(initialState);
 
 // async saga run
-store.runSaga(topicsSaga);
+store.runSaga(movieSaga);
 
 ReactDOM.hydrate(
   <Provider store={store}>
